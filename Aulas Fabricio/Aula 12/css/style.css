@@ -1,0 +1,28 @@
+@charset "utf 8";
+
+body{
+
+background-image: radial-gradient(circle #29A8B9, #89D5ED, #E3F0F3);
+
+}
+
+h1 {
+
+    color: #08609E;
+}
+
+h2 {
+
+    color: #1D9BDD;
+    
+}
+
+main{
+
+background-color: white;
+width: 30%;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+
+}
