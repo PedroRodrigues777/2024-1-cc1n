@@ -1,35 +1,46 @@
-@charset "utf 8";
+@charset "UTF-8";
 
 body{
-
-background-image: radial-gradient(circle #29A8B9, #89D5ED, #E3F0F3);
+    height: 180vh;
+    background-image: linear-gradient(180deg,#29A8B9, #0c72bb, #0cd2ff);
 
 }
 
 h1 {
 
     color: #08609E;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: justify;
+    text-shadow: 2px 2px 2px #08609E;
 }
 
 h2 {
-
-    color: #1D9BDD;
     
+    color: #1D9BDD;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: justify;
+    text-shadow: 2px 2px 2px #08609E;
 }
 
 main{
 
-background-color: white;
-width: 30%;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
+    background-color: white;
+    position: absolute;
+    width: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 35px;
+    padding: 20px;
+    box-shadow: 10px 10px 10px #006eff;
+    margin: auto;
 
 }
 
-h1{
 
-    text-align: center;
-    color: #08609E;
-    box-shadow: 30% 30% 30% #89D5ED;
+p{
+
+    text-align: justify;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
