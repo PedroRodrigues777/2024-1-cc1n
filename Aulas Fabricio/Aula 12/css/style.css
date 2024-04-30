@@ -6,7 +6,7 @@ body{
 
 }
 
-h1 {
+h1{
 
     color: #08609E;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -14,7 +14,7 @@ h1 {
     text-shadow: 2px 2px 2px #08609E;
 }
 
-h2 {
+h2{
     
     color: #1D9BDD;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -44,3 +44,4 @@ p{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
+

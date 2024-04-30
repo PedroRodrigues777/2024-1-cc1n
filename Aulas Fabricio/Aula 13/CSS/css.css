@@ -1,0 +1,16 @@
+#Seletor
+{
+color: blue;
+position: absolute;
+    width: 60%;
+    top: 50%;
+    left: 40%;
+}
+
+#cap1{
+
+color: chartreuse;
+position: relative;
+left: 80%;
+width: 60%;
+}
