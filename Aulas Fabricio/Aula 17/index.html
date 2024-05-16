@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+
+    <style>
+        *{
+            margin: 0;
+        }
+        .formulario{
+        width: 400px;
+        padding: 300px;
+        border: 1px solid white;}
+
+        .formulario span{
+    width: 100px;
+    font-size: 1.5em;}
+
+    .field{
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .field span{
+
+
+    }
+
+        div{
+            display: flex;
+            justify-content: center;
+        }
+
+        section{
+
+            
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+    </style>
+
+</head>
+<body>
+        <div><h1>Formulário de Contato</h1></div>
+
+<section>
+ <form action="mailto:pedronrodrigeus50@gmail.com" method="post" required placeholder></form>
+ <div class="field"></div>
+<span>Nome:</span>
+<input type="text" id="nome">
+<br>
+<span>Email:</span>
+<input type="text" id="Email" required>
+<br>
+<span>Data nascimento:</span>
+<input type="date">
+<br>
+<span>Visita ao site:</span>
+<input type="datetime-local">
+<br>
+<span>Senha:</span>
+<input type="password">
+<br>
+<span>Contato: </span>
+<input type="radio" name="Contato" id="sim">Sim
+<input type="radio" name="Contato" id="Não">Não
+<br>
+<span>Assunto: </span>
+<input type="checkbox" name="auto" id="auto"> Automóvel
+<input type="checkbox" name="negocio" id="auto"> Negócios
+<input type="checkbox" name="auto" id="finanças"> Finanças
+<input type="checkbox" name="auto" id="tecnologia"> tecnologia
+<input type="checkbox" name="auto" id="esportes"> Esportes
+
+<span>Local: </span>
+<select name="Local=" id="Local" size="'">
+    <option value=""></option>
+    <optgroup label="Grande Vitoria"></optgroup>
+    <option value="Vitoria">Vitoria</option>
+    <option value="Serra">Serra</option>
+    <option value="Cariacica">Cariacica</option>
+    <option value="Vila Velha">Vila Velha</option>
+    <optgroup label="Região Serrana"></optgroup>
+    <option value="Dm">Domingo Martins</option>
+    <option value="VH">Vitor Hugo</option>
+    <option value="PA">Pedra Azul</option>
+
+</select>
+<br>
+<span>comentarios</span>
+<textarea name="comentário" id="comentarios" cols="50" rows="10"></textarea>
+<br>
+<input type="submit" name="Enviar">
+<input type="reset" name="Limpar">
+</section>
+</form>
+
+</body>
+</html>
