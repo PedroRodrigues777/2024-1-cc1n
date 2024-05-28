@@ -23,29 +23,37 @@
 </div>
 
 
-    <Script>
+<body>
+    <main>
+        <section id="contato">
+            <h1>Contato</h1>
+            <div>
+                <span>Login</span>
+                <input id="usuario" type="email">
+                <span>Senha</span>
+                <input id="senha" type="password">
+                <button onclick="validarusuario()">Enviar</button> <!-- Corrigido o nome da função -->
+                <button>Cancelar</button>
+            </div>
+        </section>
+    </main>
 
-        function validarusuario(){
-        var nomeusuario = "";
-        nomeusuario = document.getElementById("usuario"). value;
-        window.alert("alerta")
-        if (nomeusuario == "administrador"){
-            window.alert("É o administrador")
+    <script>
+        const adm = "adm@gmail.com";
+        const psw = "adm123";
+
+        function validarusuario() {
+            var nomeusuario = document.getElementById("usuario").value;
+            var senha = document.getElementById("senha").value;
+            if (nomeusuario == adm && senha == psw) {
+                window.alert("É o administrador");
+            } else {
+                window.alert("Não é o administrador");
+            }
         }
-        else{window.alert("não é o administrador")}}
-
-
-        document.writeln("Olá mundo, 2 mensagem!")
-        /*window.alert("Deu abobrinha!!!!")*/
-        document.getElementById("resposta"). innerHTML = "Ola mundo usando <i> getElementById </i>"
-
-        /* Entrada*/
-        window.prompt ("Digite seu nome:")
-        var botãoresposta = window.prompt ("você está gostando de Javascript?")
-         document.writeln("feio " + "lindo") 
-
-    </Script>
-
+        
+    </script>
+</body>
 
 </body>
 </html>
