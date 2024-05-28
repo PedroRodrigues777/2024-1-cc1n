@@ -10,21 +10,28 @@
         <section id="contato">
             <h1>Contato</h1>
             <div>
-                <span>login</span>
+                <span>Login</span>
                 <input id="usuario" type="email">
                 <span>Senha</span>
                 <input id="senha" type="password">
-                <buttom onclick="Validar()">Enviar</buttom>
+                <button onclick="validarusuario()">Enviar</button> <!-- Corrigido o nome da função -->
                 <button>Cancelar</button>
             </div>
         </section>
     </main>
 
     <script>
+        const adm = "adm@gmail.com";
+        const psw = "adm123";
 
-        const adm="adm@gmail.com"
-        const psw="adm123"
-
+        function validarusuario() {
+            var nomeusuario = document.getElementById("usuario").value;
+            if (nomeusuario === adm) {
+                window.alert("É o administrador");
+            } else {
+                window.alert("Não é o administrador");
+            }
+        }
     </script>
 </body>
 </html>
