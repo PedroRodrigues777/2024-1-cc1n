@@ -1,13 +1,11 @@
-*{
-padding: 0;
-margin: 0;
-box-sizing: border-box;
-font-family: 'poppins','sans-serif';
-
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', 'sans-serif';
 }
 
-header div{
-
+header div {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -15,30 +13,30 @@ header div{
     padding: 10px 15px;
 }
 
-header img{
+header img {
     width: 150px;
 }
 
 header nav {
-font-size: 18px;
+    font-size: 18px;
+   
 }
 
-header A{
-margin: 0 5px;
-text-decoration: none;
-color: #64595900;
-padding: 5px;
+header a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
 }
 
-header A :hover{
-border-bottom: 3px solid #5f5e5e;
+header a:hover {
+    border-bottom: 3px solid #5f5e5e;
 }
 
 header nav {
-font-size: 18px;
+    font-size: 18px;
 }
 
-section{
-
+section {
 
 }
