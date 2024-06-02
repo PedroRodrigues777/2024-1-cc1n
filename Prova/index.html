@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #dia{
+            width: 40px;
+            padding: -2px;
+        }
+        #mes{
+            width: 100px;
+        }
+        #ano{
+            width: 60px;
+        }
+        div button{
+            margin-top: 5px;
+        }
+
+    </style>
+
+<div><h2>Calculadora de idade</h2></div>
+<section>
+    <span>Dia</span> 
+    <input type="number" id="dia">
+
+
+    <span>Mes</span>
+        <select name="Mes" id="mes">
+            <optgroup label="Mes"></optgroup>
+            <option value=""></option>
+            <option value="0">Janeiro</option>
+            <option value="1">Fevereiro</option>
+            <option value="2">Março</option>
+            <option value="3">Abril</option>
+            <option value="4">Maio</option>
+            <option value="5">Junho</option>
+            <option value="6">Julko</option>
+            <option value="7">Agosto</option>
+            <option value="8">Setembro</option>
+            <option value="9">Outubro</option>
+            <option value="10">Novembro</option>
+            <option value="11">Dezembro</option>
+            </select>
+    <span>Ano</span> 
+    <input id="ano" type="number" placeholder="Ano">
+
+    <div class="button">
+    <button onclick="enviaResposta()">Calcular</button>
+    </div>
+    <br>
+    <p id="resultado"></p>
+    
+</section>
+
+<script>
+
+    function enviaResposta() {
+    var dia = document.getElementById("dia").value;
+    var mes = document.getElementById("mes").value;
+    var ano = document.getElementById("ano").value;
+
+    if(!dia || !mes || !ano){
+        document.getElementById("resultado"). textContent = "Coloque todos os dados";
+        document.getElementById("resultado").classList.add("mensagem-incorreta");
+        return;
+    }
+
+    var dataNascimento = new Date(ano, mes, dia);
+    var hoje = new Date();
+
+    var idade = hoje.getFullYear() - dataNascimento.getFullYear();
+    var mesAtual = hoje.getMonth() - dataNascimento.getMonth();
+
+    if (mesAtual < 0 || (mesAtual === 0 && hoje.getDate() < dataNascimento.getDate())){
+        idade--;
+    }
+
+        document.getElementById("resultado").textContent = "voce tem" + idade + "ano";
+
+    }
+</script>
+
+
+
+</body>
+</html>

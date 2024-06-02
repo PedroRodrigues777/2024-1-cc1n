@@ -3,46 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title> <link rel="stylesheet" href="./CSS/style.css">
+    <title>Calculadora de Idades</title>
+    <link rel="stylesheet" href="./CSS/style.css">
 </head>
 <body>
     <div><h1>Calculadora de Idades</h1></div>
 
-<section>
-<span>Data de nascimento:</span>
-<input type="number" id="dia">
+    <section>
+        <span>Data de nascimento:</span>
+        <input type="number" id="dia" max="31" min="1">
+        
+        <select name="Mes" id="mes">
+            <optgroup label="Mes">
+                <option value=""></option>
+                <option value="0">Janeiro</option>
+                <option value="1">Fevereiro</option>
+                <option value="2">Março</option>
+                <option value="3">Abril</option>
+                <option value="4">Maio</option>
+                <option value="5">Junho</option>
+                <option value="6">Julho</option>
+                <option value="7">Agosto</option>
+                <option value="8">Setembro</option>
+                <option value="9">Outubro</option>
+                <option value="10">Novembro</option>
+                <option value="11">Dezembro</option>
+            </optgroup>
+        </select>
+        
+        <input id="ano" type="number" placeholder="Ano">
+        <div class="button">
+            <button onclick="enviaResposta()">Calcular</button>
+        </div>
+        <br>
+        <p id="resultado"></p>
+    </section>
 
-<select name="Mes" id="Mes">
-<optgroup label="Mes"></optgroup>
-<option value=""></option>
-<option value="Janeiro">Janeiro</option>
-<option value="Fevereiro">Fevereiro</option>
-<option value="Março">Março</option>
-<option value="Abril">Abril</option>
-<option value="Maio">Maio</option>
-<option value="Junho">Junho</option>
-<option value="Julho">Julho</option>
-<option value="Agosto">Agosto</option>
-<option value="Setembro">Setembro</option>
-<option value="Outubro">Outubro</option>
-<option value="Novembro">Novembro</option>
-<option value="Dezembro">Dezembro</option>
+    <script>
+        function enviaResposta() {
+            var dia = document.getElementById("dia").value;
+            var mes = document.getElementById("mes").value;
+            var ano = document.getElementById("ano").value;
 
-<input id ="Ano" type="number">
+            if (!dia || !mes || !ano) {
+                document.getElementById("resultado").textContent = "Preencha todas as informações!";
+                document.getElementById("resultado").classList.add("mensagem-incorreta");
+                return;
+            }
 
-</section>
-</select>
-<button onclick="calcularIdade">Calcular idade</button>
+            var dataNascimento = new Date(ano, mes, dia);
+            var hoje = new Date();
 
-<div id="resultado"></div>
+            var idade = hoje.getFullYear() - dataNascimento.getFullYear();
+            var mesAtual = hoje.getMonth() - dataNascimento.getMonth();
 
-<script>
-    function calcularIdade() {
+            if (mesAtual < 0 || (mesAtual === 0 && hoje.getDate() < dataNascimento.getDate())) {
+                idade--;
+            }
 
-        var dia = parseIntdocument.getElementById('dia').value;
-        var mes = parseIntdocument.getElementById('Mes').value;
-        var ano = parseInt(document.getElementById('Ano').value;
-    }
-</script>
+            document.getElementById("resultado").textContent = "Você tem " + idade + " anos.";
+           
+        }
+    </script>
 </body>
 </html>
